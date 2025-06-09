@@ -8,7 +8,6 @@ import {
   Shield,
 } from 'lucide-react';
 import { Card } from '../components/ui/Card';
-
 import { AdminDomains } from '../components/admin/AdminDomains';
 import { AdminQuestions } from '../components/admin/AdminQuestions';
 import { AdminDashboard } from '../components/admin/AdminDashboard';
