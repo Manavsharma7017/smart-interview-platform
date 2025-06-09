@@ -1,0 +1,21 @@
+syntax ="proto3";
+option go_package = "smart-interview-platform/grpcclient/common";
+message UserSubmittion{
+    string Question = 1;
+    string Answer = 2;
+    string UserId = 3;
+    string ResponceId=4;
+}
+message UserSubmittionResponse{
+    string Question = 1;
+    string Answer = 2;
+    string UserId = 3;
+    string Clarity = 4;    
+	string Tone = 5; 
+	string Relevance = 6;     
+    string OverallScore =7;
+	string Suggestio =8;
+}
+service UserSubmittionService{
+    rpc SubmitUserSubmittion(UserSubmittion) returns (UserSubmittionResponse);
+}
