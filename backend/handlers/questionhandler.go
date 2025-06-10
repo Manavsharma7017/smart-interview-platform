@@ -54,7 +54,7 @@ func GetAllQuestionsHandler(c *fiber.Ctx) error {
 }
 func GetQuestionFilterHandler(c *fiber.Ctx) error {
 	difficulty := c.Query("difficulty")
-	domainID := c.QueryInt("domain_id", 0)
+	domainID := c.QueryInt("domain_id")
 
 	questions, err := services.GetQuestions(difficulty, domainID)
 	if err != nil {

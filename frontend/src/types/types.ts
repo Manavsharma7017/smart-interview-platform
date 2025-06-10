@@ -24,6 +24,7 @@ export interface Question {
   id: string;
   text: string;
   difficulty: 'EASY' | 'MEDIUM' | 'HARD';
+  domains: Domain;
   domain_id: number;
   created_at: string;
 }

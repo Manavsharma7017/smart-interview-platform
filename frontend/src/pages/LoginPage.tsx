@@ -37,7 +37,7 @@ export const LoginPage: React.FC = () => {
         role,
       });
 
-      navigate('/app/dashboard');
+      navigate('/');
     } catch (err: any) {
       console.error('Login error:', err);
       setError(err?.response?.data?.message || 'Login failed. Please try again.');

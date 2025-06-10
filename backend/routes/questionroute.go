@@ -16,6 +16,6 @@ func QuestionRoutes(c *fiber.App) {
 	questionAdmingroup.Delete("/:id", handlers.DeleteQuestionHandler)
 	questiongroup.Get("/", handlers.GetQuestionFilterHandler)
 	questiongroup.Get("/:id", handlers.GetQuestionHandler)
-	questiongroup.Get("/all", handlers.GetAllQuestionsHandler)
+	questiongroup.Get("/find/all", handlers.GetAllQuestionsHandler)
 
 }

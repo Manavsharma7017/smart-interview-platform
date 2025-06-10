@@ -58,7 +58,7 @@ export const RegisterPage: React.FC = () => {
       });
 
 
-      navigate('/app/dashboard');
+      navigate('/');
     
     } catch (err: any) {
       setError(err.response?.data?.message || 'An error occurred while registering. Please try again.');

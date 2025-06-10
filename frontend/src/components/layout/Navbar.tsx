@@ -60,14 +60,22 @@ export const Navbar: React.FC = () => {
             >
               <Home className="h-4 w-4" />
               <span>Dashboard</span>
-            </Link>}
-            <Link
+            </Link>}{
+              isAdmin ?<Link
               to="/app/admin/questions"
               className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
             >
               <MessageSquare className="h-4 w-4" />
               <span>Question</span>
+            </Link>: <Link
+              to="/app/question"
+              className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              <MessageSquare className="h-4 w-4" />
+              <span>Question</span>
             </Link>
+            }
+            
             <Link
               to="/app/history"
               className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"

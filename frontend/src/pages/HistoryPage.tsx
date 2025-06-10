@@ -3,7 +3,7 @@
 const HistoryPage = () => {
   return (
     <div>
-      
+      history page
     </div>
   )
 }

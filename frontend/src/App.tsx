@@ -14,6 +14,7 @@
   import InterviewPage from './pages/InterviewPage';
   import HistoryPage from './pages/HistoryPage';
   import {AdminPage} from './pages/AdminPage';
+import { QuestionPage } from './pages/QuestionPagee';
 
   const AppContent: React.FC = () => {
     const setAuth = useSetRecoilState(authState);
@@ -52,6 +53,7 @@
     {/* Protected */}
     <Route path="/app" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
       <Route index element={<Navigate to="/app/dashboard" replace />} />
+      <Route path="question" element={<QuestionPage/>} />
       <Route path="dashboard" element={<DashboardPage />} />
       <Route path="interview/:sessionId" element={<InterviewPage />} />
       <Route path="history" element={<HistoryPage />} />

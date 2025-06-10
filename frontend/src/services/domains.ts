@@ -13,6 +13,17 @@ export const domainService = {
     }));
     return domains;
   },
+  async getAllUserDomains(): Promise<Domain[]> {
+    const response = await apiClient.get('/domain/getall');
+   const rawDomains = response.data.domains;
+    const domains: Domain[] = rawDomains.map((d: any) => ({
+      id: d.ID,
+      name: d.Name,
+      description: d.Description,
+     
+    }));
+    return domains;
+  },
 
   async createDomain(domain: Omit<Domain, 'id'>): Promise<Domain> {
     const response = await apiClient.post('/admin/domain/create', domain);
