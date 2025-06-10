@@ -9,7 +9,6 @@ export const domainService = {
       id: d.ID,
       name: d.Name,
       description: d.Description,
-      // Add other fields if needed, e.g. questions: d.Questions
     }));
     return domains;
   },

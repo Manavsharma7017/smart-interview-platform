@@ -137,7 +137,9 @@ export const QuestionPage: React.FC = () => {
       <div className="space-y-4">
         {filteredQuestions.map((question) => (
           <Card key={question.id} className="p-6">
-            <div className="flex items-start justify-between">
+            <div className="flex items-start justify-between hover:cursor-pointer" onClick={() => {
+              window.location.href = `/app/question/${question.id}`;
+            }}>
               <div className="flex-1">
                 <div className="flex items-center space-x-3 mb-3">
                   <div className="p-2 bg-purple-100 rounded-lg">

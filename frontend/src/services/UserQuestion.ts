@@ -42,7 +42,9 @@ export const userQuestionService = {
             text: q.Text,
             difficulty: q.Difficulty,
             domain_id: q.DomainID,
-            domains: q.Domains,
+           domains: { id: q.Domain.ID,
+            name: q.Domain.Name,
+            description: q.Domain.Description},
             created_at: q.CreatedAt,
         };
         return question;

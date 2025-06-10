@@ -10,11 +10,12 @@
   import {LandingPage} from './pages/LandingPage';
   import { ProtectedRoute } from './components/auth/Protected';
   import {Layout} from './components/layout/Layout';
-  import DashboardPage from './pages/DashboardPage';
+  import {DashboardPage} from './pages/DashboardPage';
   import InterviewPage from './pages/InterviewPage';
-  import HistoryPage from './pages/HistoryPage';
+  import {DomainPage} from './pages/DomainPage';
   import {AdminPage} from './pages/AdminPage';
 import { QuestionPage } from './pages/QuestionPagee';
+import { QuestionPageId } from './pages/QuestionPageId';
 
   const AppContent: React.FC = () => {
     const setAuth = useSetRecoilState(authState);
@@ -54,9 +55,10 @@ import { QuestionPage } from './pages/QuestionPagee';
     <Route path="/app" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
       <Route index element={<Navigate to="/app/dashboard" replace />} />
       <Route path="question" element={<QuestionPage/>} />
+      <Route path="question/:id" element={<QuestionPageId />} />
       <Route path="dashboard" element={<DashboardPage />} />
       <Route path="interview/:sessionId" element={<InterviewPage />} />
-      <Route path="history" element={<HistoryPage />} />
+      <Route path="domain" element={<DomainPage />} />
       <Route path="admin/*" element={
         <ProtectedRoute requireAdmin>
           <AdminPage />

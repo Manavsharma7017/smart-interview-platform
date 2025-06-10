@@ -4,12 +4,12 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import {
   Brain,
   Home,
-  History,
   Settings,
   MessageSquare,
   LogOut,
   User,
   LogIn,
+  Book,
   
 } from 'lucide-react';
 
@@ -77,11 +77,11 @@ export const Navbar: React.FC = () => {
             }
             
             <Link
-              to="/app/history"
+              to="/app/domain"
               className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
             >
-              <History className="h-4 w-4" />
-              <span>History</span>
+              <Book className="h-4 w-4" />
+              <span>Domain</span>
             </Link>
             {isAdmin && (
               <Link
