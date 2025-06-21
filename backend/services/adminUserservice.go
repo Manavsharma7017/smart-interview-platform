@@ -69,7 +69,7 @@ func GetAllAdminUserService() ([]models.AdminUser, error) {
 }
 func GetAdminDashboardService() (map[string]int64, error) {
 	var userCount int64
-	if err := database.DB.Model(&models.AdminUser{}).Count(&userCount).Error; err != nil {
+	if err := database.DB.Model(&models.User{}).Count(&userCount).Error; err != nil {
 		return nil, err
 	}
 

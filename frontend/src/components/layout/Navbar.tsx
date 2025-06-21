@@ -61,13 +61,7 @@ export const Navbar: React.FC = () => {
               <Home className="h-4 w-4" />
               <span>Dashboard</span>
             </Link>}{
-              isAdmin ?<Link
-              to="/app/admin/questions"
-              className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              <MessageSquare className="h-4 w-4" />
-              <span>Question</span>
-            </Link>: <Link
+              !isAdmin &&<Link
               to="/app/question"
               className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
             >
@@ -75,7 +69,7 @@ export const Navbar: React.FC = () => {
               <span>Question</span>
             </Link>
             }
-            
+            {!isAdmin &&
             <Link
               to="/app/domain"
               className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors"
@@ -83,6 +77,7 @@ export const Navbar: React.FC = () => {
               <Book className="h-4 w-4" />
               <span>Domain</span>
             </Link>
+}
             {isAdmin && (
               <Link
                 to="/app/admin"

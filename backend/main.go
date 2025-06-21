@@ -20,6 +20,7 @@ func main() {
 		AllowHeaders: "Origin, Content-Type, Accept, Authorization",
 	}))
 	database.ConnectDB()
+	database.AutoMigrate()
 	PDB, err := database.DB.DB()
 	if err != nil {
 		log.Fatalf("❌ Failed to get DB instance: %v", err)

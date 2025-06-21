@@ -197,7 +197,7 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Pricing Section
       <section id="pricing" className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -210,7 +210,7 @@ export const LandingPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Free Plan */}
+            {/* Free Plan 
             <Card className="p-8 hover" hover>
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Free</h3>
@@ -238,7 +238,7 @@ export const LandingPage: React.FC = () => {
               </Link>
             </Card>
 
-            {/* Pro Plan */}
+            {/* Pro Plan }
             <Card className="p-8 hover border-2 border-blue-500 relative" hover>
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <Badge className="bg-blue-500 text-white">Most Popular</Badge>
@@ -278,7 +278,7 @@ export const LandingPage: React.FC = () => {
               </Link>
             </Card>
 
-            {/* Enterprise Plan */}
+            {/* Enterprise Plan }
             <Card className="p-8 hover" hover>
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
@@ -313,9 +313,8 @@ export const LandingPage: React.FC = () => {
             </Card>
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
+      </section> 
+      {/* CTA Section }
       <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -338,7 +337,7 @@ export const LandingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
+        {*/}
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4">
